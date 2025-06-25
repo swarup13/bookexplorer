@@ -1,0 +1,166 @@
+ECMAScript 2015 is also known as ES6 and ECMAScript 6.
+
+
+
+1. let keyword
+
+   the let keyword was introduced in ES6 (2015)
+
+# Variables declared with let have Block Scope. i.e it cant be access outside of box.
+
+
+e.g. -   {
+     let a = 3;
+}
+console.log(a);  // Reference Error: a is not defined
+
+# Variables declared with let must be Declared before use bca. let will not support hoisting.
+
+e.g.   name = "Swarup";
+let name ;
+
+// console.log(name); //Reference Error: Cannot access 'name' before initialization
+
+# Variables declared with let cannot be Redeclared in the same scope
+
+e.g.   
+{
+
+    let x = 1;
+
+     x = 3;  // we can reinitalize but not redeclared
+//let x = 4
+     console.log(x);
+     
+}
+
+// we cant access outside bca. of block scope
+//console.log(x);  // ReferenceError: x is not defined
+
+
+// # if we want to redeclare let variable we declare in another block
+
+ let x = 2;   // Allowed
+
+{
+let x = 3;   // Allowed
+}
+
+{
+let x = 4;    // Allowed
+}
+
+
+//===========================================
+
+
+2 . const keyword
+
+// it is almost same like let keyword 
+
+// the difference is we cant reassign value to const variable
+
+e.g  -     
+
+// Variables defined with const cannot be Reassigned
+
+{
+
+     const v = "natu";
+
+     v = "vella";
+
+     console.log(v);  // TypeError: Assignment to constant variable.
+     
+}
+
+
+* When to use JavaScript const?
+👉 Always declare a variable with const when you know that the value should not be changed.
+
+
+//======================================
+
+
+# Difference Between var, let and const
+
+Difference Between var, let and const
+          Scope 	Redeclare	Reassign	Hoisted	   Binds this
+var	   global          y              y               y            y
+
+
+let        block           n              y               n           n
+
+
+const      block          n              n               n            n
+
+
+
+//==================================================================
+
+
+3. Arrow function
+
+
+//why use -   it is way to write function in consize (shorter) way.
+
+
+syntax  -      keyword var_name = (parameter) =>{stmt block}
+
+
+
+
+
+
+
+
+//==================================================================================
+
+
+ 4. for of loop
+
+The JavaScript for/of statement loops through the values of an iterable objects.
+
+iterable - An object that has iterable properties.
+e.g.  -   Arrays, Strings, Maps, NodeLists, and more.
+
+syntax -    for (variable of iterable) {
+ 
+            // code block to be executed
+
+          }
+
+
+
+        const arr = [1,2,5,7];
+
+        for(let x of arr){
+ 
+            console.log(x);
+        }
+     
+
+//-----------------------------------------------------------------------
+
+
+  5.  for in loop
+
+   The JavaScript for in statement loops through the properties of an Object:
+
+
+   syntax -    for(key in objectName){
+            
+                  console.log(objName[key]);
+                
+               }
+
+   
+        The for in loop iterates over a objects
+      Each iteration returns a key (x)
+     The key is used to access the value of the key
+      The value of the key is person[x]
+
+//===========================================================================
+
+ 
+ 
